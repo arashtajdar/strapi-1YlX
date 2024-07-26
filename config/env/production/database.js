@@ -9,8 +9,8 @@ module.exports = ({ env }) => ({
             password: env('POSTGRES_PASSWORD'),
         },
         useNullAsDefault: true,
-    },
-    pool: { min: 0 }
+        pool: { min: 0 }
+    }
 });
 
 // module.exports = ({ env }) => ({
