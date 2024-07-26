@@ -10,6 +10,7 @@ module.exports = ({ env }) => ({
         },
         useNullAsDefault: true,
     },
+    pool: { min: 0 }
 });
 
 // module.exports = ({ env }) => ({
