@@ -4,7 +4,8 @@
   "info": {
     "singularName": "place",
     "pluralName": "places",
-    "displayName": "Place"
+    "displayName": "Place",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,28 +27,27 @@
     "phone": {
       "type": "string"
     },
-    "about": {
-      "type": "blocks"
-    },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "email": {
       "type": "email"
@@ -69,6 +69,9 @@
       "relation": "oneToMany",
       "target": "api::review.review",
       "mappedBy": "place"
+    },
+    "about": {
+      "type": "richtext"
     }
   }
 }
